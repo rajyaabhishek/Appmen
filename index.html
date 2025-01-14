@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>APPMEN - App Publishing</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
+    <link href="https://fonts.cdnjs.com/css?family=Orbitron:400,700" rel="stylesheet">
+    <link href="https://fonts.cdnjs.com/css?family=Rajdhani:400,600,700" rel="stylesheet">
+    <style>
+        html, body {
+            height: 100vh;
+            margin: 0;
+        }
+
+        body {
+            font-family: 'Rajdhani', sans-serif;
+        }
+
+        .cyber-heading {
+            font-family: 'Orbitron', sans-serif;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+        }
+
+        @keyframes neon-pulse {
+            0%, 100% {
+                text-shadow: 
+                    0 0 7px #fff,
+                    0 0 10px #fff,
+                    0 0 21px #fff,
+                    0 0 42px #0ff,
+                    0 0 82px #0ff,
+                    0 0 92px #0ff,
+                    0 0 102px #0ff,
+                    0 0 151px #0ff;
+            }
+            50% {
+                text-shadow: 
+                    0 0 4px #fff,
+                    0 0 7px #fff,
+                    0 0 13px #fff,
+                    0 0 25px #0ff,
+                    0 0 45px #0ff,
+                    0 0 55px #0ff,
+                    0 0 70px #0ff,
+                    0 0 100px #0ff;
+            }
+        }
+
+        .logo-text {
+            animation: neon-pulse 2.5s infinite;
+            color: #fff;
+        }
+
+        @keyframes rgb-text {
+            0% { color: #ff3870; }
+            33% { color: #00ff6c; }
+            66% { color: #0ff; }
+            100% { color: #ff3870; }
+        }
+
+        @keyframes scroll {
+            0% { transform: translateX(100%); }
+            100% { transform: translateX(-100%); }
+        }
+
+        .scrolling-text {
+            white-space: nowrap;
+            animation: scroll 20s linear infinite;
+        }
+
+        .rgb-text {
+            animation: rgb-text 3s infinite linear;
+        }
+
+        .cyber-bg {
+            background: linear-gradient(45deg, #000000, #1a1a1a);
+            position: relative;
+        }
+
+        .cyber-bg::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: 
+                linear-gradient(90deg, #000 21px, transparent 1%) center,
+                linear-gradient(#000 21px, transparent 1%) center,
+                rgba(0, 255, 108, 0.1);
+            background-size: 22px 22px;
+            pointer-events: none;
+        }
+
+        .info-panel {
+            background: rgba(0, 0, 0, 0.7);
+            border: 2px solid;
+            border-image: linear-gradient(45deg, #ff3870, #00ff6c, #0ff) 1;
+            backdrop-filter: blur(10px);
+        }
+
+        .cyber-line {
+            height: 2px;
+            background: linear-gradient(90deg, #ff3870, #00ff6c, #0ff);
+        }
+
+        .scroll-container {
+            width: 100%;
+            overflow: hidden;
+            background: rgba(0, 0, 0, 0.5);
+            padding: 0.5rem 0;
+            margin: 1rem 0;
+            border-top: 1px solid rgba(0, 255, 255, 0.2);
+            border-bottom: 1px solid rgba(0, 255, 255, 0.2);
+        }
+
+        .main-container {
+            height: 100vh;
+            display: grid;
+            grid-template-rows: auto auto auto 1fr;
+            gap: 1rem;
+            padding: 1.5rem;
+        }
+
+        .brand-container {
+            position: relative;
+            text-align: center;
+            margin-bottom: 1rem;
+        }
+
+        .brand-tag {
+            font-size: 0.8rem;
+            letter-spacing: 0.5em;
+            text-transform: uppercase;
+            color: rgba(0, 255, 255, 0.7);
+            margin-top: 0.5rem;
+        }
+    </style>
+</head>
+<body class="cyber-bg text-white">
+    <div class="main-container">
+        <!-- Enhanced Header with Logo -->
+        <header class="brand-container">
+            <div class="mb-2">
+                <h1 class="cyber-heading text-7xl font-bold logo-text tracking-widest">APPMEN</h1>
+                <div class="brand-tag">Professional App Publishing</div>
+            </div>
+            <div class="cyber-line mt-4 w-32 mx-auto"></div>
+        </header>
+
+        <!-- Scrolling Text -->
+        <div class="scroll-container">
+            <div class="scrolling-text rgb-text">
+                APPMEN • PROFESSIONAL APP PUBLISHING • LOWEST PRICES GUARANTEED • FAST DEPLOYMENT • EXPERT GUIDANCE • APPMEN • GOOGLE PLAY STORE EXPERTS • 100% SATISFACTION • APPMEN
+            </div>
+        </div>
+
+        <!-- Contact Info -->
+        <div class="info-panel p-4 rounded-lg text-center mx-auto w-full max-w-2xl">
+            <div class="cyber-heading text-xl font-bold rgb-text mb-3">CONTACT DETAILS</div>
+            <div class="space-y-2">
+                <p class="text-lg tracking-wider">📧 abhirajid@gmail.com</p>
+                <p class="text-lg tracking-wider">📱 +91 98737 77831</p>
+            </div>
+        </div>
+
+        <!-- Features -->
+        <div class="grid grid-cols-3 gap-4">
+            <div class="info-panel p-4 rounded-lg text-center">
+                <h3 class="cyber-heading text-lg font-bold rgb-text mb-2">LOWEST PRICE</h3>
+                <p class="text-gray-400 tracking-wide text-sm">Market's Best Rates</p>
+            </div>
+            <div class="info-panel p-4 rounded-lg text-center">
+                <h3 class="cyber-heading text-lg font-bold rgb-text mb-2">FAST SERVICE</h3>
+                <p class="text-gray-400 tracking-wide text-sm">Rapid Deployment</p>
+            </div>
+            <div class="info-panel p-4 rounded-lg text-center">
+                <h3 class="cyber-heading text-lg font-bold rgb-text mb-2">PROFESSIONAL</h3>
+                <p class="text-gray-400 tracking-wide text-sm">Expert Solutions</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
